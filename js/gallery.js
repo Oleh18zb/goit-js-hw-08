@@ -88,6 +88,12 @@ const images = [
         if (event.target.nodeName !== 'IMG') return;
 
         const largeImageUrl = event.target.dataset.source;
-        console.log(largeImageUrl);
+        // console.log(largeImageUrl);
+        const instance = basicLightbox.create(`
+           <div class="modal">
+           <img src="${largeImageUrl}" width="1112" height="640">
+           </div> 
+            `);
         
-    })
+            instance.show();
+    });
