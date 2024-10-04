@@ -79,3 +79,96 @@ button {
 .modal {
     background-color: rgba(46, 47, 66, 0.8);
 }
+
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .movie-item {
+    list-style: none;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  margin: 20px;
+  background-color: #fff;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  height: 750px; /* Задаємо фіксовану висоту для картки */
+  position: relative;
+}
+.movie-item:hover {
+  transform: scale(1.05);
+  }
+
+  #productTable {
+    border-collapse: collapse;
+    width: 800px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  #productTable th,
+  #productTable td {
+    border: 1px solid rgb(231, 156, 156);
+    padding: 8px;
+  }
+  #productTable th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  #productDetails {
+    font-weight: 700;
+    font-style: italic;
+    font-size: 24px;
+  }
+
+  .statList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .calcButton {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  .calcButton:hover {
+    background-color: #3e8e41;
+  }
+  #resultButton {
+    background-color: #008cba;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+  #resultButton:hover {
+    background-color: #006b9e;
+  }
+  #resultSection {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
