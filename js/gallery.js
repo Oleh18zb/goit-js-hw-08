@@ -251,6 +251,8 @@ const divResult = document.querySelector('#resultSection');
 
 let result = 0;
 
+let stats = {};
+
 btn.addEventListener('click', showResult);
 divBtn.addEventListener('click', onBtnClick);
 
@@ -261,11 +263,24 @@ function onBtnClick(event) {
   }
   const value = Number(event.target.dataset.number);
   result += value;
-  console.log(result);
-  
+  // console.log(result);
+  const key = event.target.textContent;
+  // console.log(key, stats[key]);
+  if (!stats[key]) {
+    stats[key] = 1;
+  } else {
+    stats[key] += 1;
+  }
 }
 
 function showResult() {
-  divResult.textContent = `total: ${result}`;
+  let markup = `total: ${result}`;
+  for (const [key,value] of Object.entries(stats)) {
+    // console.log(key);
+    markup += ` ${key} pressed ${value} times`;
+  }
+  divResult.textContent = markup;
   result = 0;
+  stats = {};
 }
+
